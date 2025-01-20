@@ -11,6 +11,14 @@
     <a href="{{ route('post.edit', $post->id) }}">Edit</a>
   </div>
   <div class="px-2">
+    <form action="{{ route('post.delete', $post->id) }}" method="POST">
+      @csrf
+      @method('delete')
+      <input type="submit" value="Delete" class="btn btn-danger" >
+    </form>
+
+  </div>
+  <div class="px-2">
     <a href="{{ route('post.index') }}">Back</a>
   </div>
 </div>

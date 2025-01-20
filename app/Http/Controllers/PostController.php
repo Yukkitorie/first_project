@@ -47,13 +47,17 @@ class PostController extends Controller
         return redirect()->route('post.show', $post->id);
     }
 
-    public function delete()
-    {
-        $post = Post::find(2);
-        $post->delete();
-        dd('finish');
-    }
+    // public function delete()
+    // {
+    //     $post = Post::find(2);
+    //     $post->delete();
+    //     dd('finish');
+    // }
 
+    public function delete(Post $post){
+        $post->delete();
+        return redirect()->route('post.index');
+    }
     // firstOrCreate
     // updateOrCreate
 
