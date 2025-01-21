@@ -20,10 +20,7 @@
             <a class="nav-link" href="{{ route('post.index') }}">Posts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('about.index') }}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
+            <a class="nav-link" href="{{ route('person.index') }}">Person</a>
           </li>
         </ul>
       </nav>
