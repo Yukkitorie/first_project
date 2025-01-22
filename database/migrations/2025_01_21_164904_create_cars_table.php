@@ -20,6 +20,8 @@ class CreateCarsTable extends Migration
             $table->integer('year');
             $table->string('color');
             $table->bigInteger('vin_number');
+            $table->timestamps();
+            $table->softDeletes();
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';

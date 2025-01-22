@@ -29,10 +29,7 @@
       <input class="form-control" name="sex"  id="sex" type="text" placeholder="type smth...">
     </div>
     
-    <div class="px-2">
-      <label for="btn"></label>
-      <button type="submit"name=""   id="btn" class="btn btn-primary">Create</button>
-    </div>
+
   </form>
 @endsection
 

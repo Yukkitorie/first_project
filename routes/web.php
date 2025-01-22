@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\CarsController;
 
 
 
@@ -33,7 +34,13 @@ Route::patch('person/{person}',[PersonController::class, 'update'])->name('perso
 Route::delete('person/{person}',[PersonController::class, 'delete'])->name('person.delete');
 
 // CRUD via UI Cars
-
+Route::get('/cars', [CarsController::class, 'index'])->name('cars.index');
+Route::get('/cars/create', [CarsController::class, 'create'])->name('cars.create');
+Route::post('/cars', [CarsController::class, 'store'])->name('cars.store');
+Route::get('/cars/{car}', [CarsController::class, 'show'])->name('cars.show');
+Route::get('/cars/{car}/edit', [CarsController::class, 'edit'])->name('cars.edit');
+Route::patch('/cars/{car}', [CarsController::class, 'update'])->name('cars.update');
+Route::delete('/cars/{car}', [CarsController::class, 'delete'])->name('cars.delete');
 
 // Other routes
 Route::get('/main', [MainController::class, 'index'])->name('main.index');
