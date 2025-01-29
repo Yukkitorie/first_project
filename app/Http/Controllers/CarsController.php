@@ -10,12 +10,12 @@ class CarsController extends Controller
 {
     public function index(){
     $car = Car::all();
-    return view('cars.index', compact('car'));
+    return view('cars.index', compact('car'));  
 }
 
     public function create(){
         return view('cars.create');
-}
+    }
 
     public function store(){
         $data = \request()->validate([
@@ -27,7 +27,7 @@ class CarsController extends Controller
         ]);
         Car::create($data);   // Car::create is a reference to the model
         return redirect()->route('cars.index');
-}
+    }
 
     public function show(Car $car){
         return view('cars.show', compact('car'));
